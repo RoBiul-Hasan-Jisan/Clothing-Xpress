@@ -45,33 +45,3 @@ export async function POST(req: Request) {
     );
   }
 }
-
-
-// import clientPromise from "@/app/lib/mongodb";
-// import { hash } from "bcryptjs";
-
-// export async function POST(req: Request) {
-//   try {
-//     const body = await req.json();
-//     const { name, email, password } = body;
-
-//     if (!name || !email || !password) {
-//       return new Response(JSON.stringify({ message: "Missing fields" }), { status: 400 });
-//     }
-
-//     const client = await clientPromise;
-//     const db = client.db(process.env.MONGODB_DB);
-//     const existingUser = await db.collection("users").findOne({ email });
-
-//     if (existingUser) {
-//       return new Response(JSON.stringify({ message: "User already exists" }), { status: 400 });
-//     }
-
-//     const hashedPassword = await hash(password, 10);
-//     await db.collection("users").insertOne({ name, email, password: hashedPassword });
-
-//     return new Response(JSON.stringify({ message: "User created" }), { status: 201 });
-//   } catch (err) {
-//     return new Response(JSON.stringify({ message: "Error creating user" }), { status: 500 });
-//   }
-// }
