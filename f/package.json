@@ -1,5 +1,6 @@
 {
-  "name": "my-app",
+  "name": "cloth_xpress",
+  "author":"Robiul Hasan Jisan(https://github.com/RoBiul-Hasan-Jisan/Clothing-Xpress)",
   "version": "0.1.0",
   "private": true,
   "scripts": {
